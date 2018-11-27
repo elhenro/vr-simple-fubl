@@ -4,3 +4,5 @@
 https://stackoverflow.com/questions/52686286/how-to-update-your-unity-project-input-to-steamvr-2-0
 
 https://www.youtube.com/watch?v=bn8eMxBcI70
+
+https://docs.unity3d.com/Manual/CreateDestroyObjects.html
