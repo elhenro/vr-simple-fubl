@@ -144,6 +144,7 @@ GameObject:
   - component: {fileID: 114331016856239516}
   - component: {fileID: 114080140087831334}
   - component: {fileID: 114458598591981742}
+  - component: {fileID: 114840819259246962}
   m_Layer: 0
   m_Name: fublo
   m_TagString: Untagged
@@ -828,6 +829,21 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   snapAttachEaseInCompleted: 0
   interactable: {fileID: 0}
+--- !u!114 &114840819259246962
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1973937042670720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66ce6aa3c9af8e84d9ef0a8ea1e98246, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jump: {x: 0, y: 3, z: 0}
+  jumpForce: 3
+  isGrounded: 0
+  rb: {fileID: 54040269243775806}
 --- !u!135 &135515701342875300
 SphereCollider:
   m_ObjectHideFlags: 1

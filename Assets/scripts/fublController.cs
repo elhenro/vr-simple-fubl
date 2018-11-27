@@ -62,7 +62,7 @@ public class fublController : MonoBehaviour {
 	{
 		if (getPinch())
         {
-            follow = !follow; // toggle follow
+            //follow = !follow; // toggle follow
             if (madeHappySound == false) {
                 makeHappySound(); 
             }

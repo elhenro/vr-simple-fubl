@@ -18,6 +18,8 @@ public class devMenu : MonoBehaviour {
 	
 	public bool reloadsScene = false;
 	public bool isSpawner = false;
+	public bool shootingRangeLoader = false;
+	public bool startSceneLoader = false;
 
 	public GameObject furblo;
 
@@ -46,6 +48,12 @@ public class devMenu : MonoBehaviour {
 				} else if ( reloadsScene == false){
 					if(isSpawner){
 						spawnFurblo();
+					} else
+					if(shootingRangeLoader){
+						loadShootingRange();
+					} else
+					if(startSceneLoader){
+						loadStartScene();
 					}
 				}
 			} else if (isTouching != true){
@@ -69,5 +77,13 @@ public class devMenu : MonoBehaviour {
 
 	private void spawnFurblo() {
 		Instantiate(furblo);
+	}
+
+	void loadShootingRange() {
+		SceneManager.LoadScene("shootingRange");
+	}
+
+	void loadStartScene() {
+		SceneManager.LoadScene("start");
 	}
 }

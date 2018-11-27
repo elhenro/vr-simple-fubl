@@ -402,6 +402,7 @@
   <ItemGroup>
     <None Include="Assets\ErbGameArt\Dynamic sky shader\Materials\Read me!.txt" />
     <None Include="Assets\ErbGameArt\Dynamic sky shader\Shader\Skybox Pro.shader" />
+    <None Include="Assets\SimplyPack\readMe.txt" />
     <None Include="Assets\SteamVR\InteractionSystem\Core\Shaders\SeeThru.shader" />
     <None Include="Assets\SteamVR\InteractionSystem\Core\Shaders\Silhouette.shader" />
     <None Include="Assets\SteamVR\InteractionSystem\Hints\Shaders\ControllerButtonHints.shader" />
