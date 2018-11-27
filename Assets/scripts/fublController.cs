@@ -13,7 +13,7 @@ public class fublController : MonoBehaviour {
     public float speed;
 	public bool follow;
 	//public bool happy;
-	public float jumpThrust;
+	public float jumpForce;
     public bool bouncing;
 
     public Rigidbody rb;
@@ -32,6 +32,8 @@ public class fublController : MonoBehaviour {
     SteamVR_Input handType;
 
     private bool madeHappySound = false;
+    private bool isGrounded = false;
+    private Vector3 jumpVector;
 
     //private int interval = 5; 
     //private float nextTime = 0;
@@ -39,7 +41,8 @@ public class fublController : MonoBehaviour {
 	void Start()
     {
         rb = GetComponent<Rigidbody>();
-		audioSource = GetComponent<AudioSource>();
+        jumpVector = new Vector3(0.0f, jumpForce, 0.0f);
+        audioSource = GetComponent<AudioSource>();
 
          if ((hand == null) && (GetComponent<Hand>() != null)){
             hand = gameObject.GetComponent<Hand>();
@@ -52,6 +55,7 @@ public class fublController : MonoBehaviour {
         audioSource.clip = impactSound;
         audioSource.Play();
         madeHappySound = false;
+        jump();
     }
 
 	private void Update()
@@ -59,7 +63,6 @@ public class fublController : MonoBehaviour {
 		if (getPinch())
         {
             follow = !follow; // toggle follow
-			rb.AddRelativeForce(Vector3.up * jumpThrust); 	// jump
             if (madeHappySound == false) {
                 makeHappySound(); 
             }
@@ -70,15 +73,6 @@ public class fublController : MonoBehaviour {
 		    float step = speed * Time.deltaTime;
             transform.position = Vector3.MoveTowards(transform.position, followTarget.position, step);
 		}
-/* 
-        if (bouncing)
-        {   
-            if (Time.time >= nextTime) {
-                bounce();
-                nextTime += interval; 
-            }
-        }
-	*/
     }
 
     public void makeHappySound()
@@ -95,12 +89,22 @@ public class fublController : MonoBehaviour {
     }
 
     private void bounce(){
-        rb.AddRelativeForce(Vector3.up * jumpThrust);
+        rb.AddRelativeForce(Vector3.up * jumpForce);
     }
 
     // todo: if falling down make sound
 
     // todo: jump / move / bounce
+    void OnCollisionStay()
+	{
+		isGrounded = true;
+	}
+
+    private void jump(){
+        if(isGrounded){
+            rb.AddForce(jumpVector * jumpForce, ForceMode.Impulse);
+        }
+    }
 
     // ondeath att explosion force that pushed player away
 
