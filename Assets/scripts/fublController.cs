@@ -6,29 +6,31 @@ using Valve.VR;
 using Valve.VR.InteractionSystem;
 //using UnityEngine.Events;
 
-
+//[RequireComponent(typeof(AudioSource))]
 public class fublController : MonoBehaviour {
 
 	public Transform followTarget;
     public float speed;
-	public bool followOnStart;
+	public bool follow;
 
     public Rigidbody rb;
 
-	public bool happy;
+	//public bool happy;
 	public float jumpThrust;
 
+    public AudioClip impactSound;
 	public AudioClip sound1;
     public AudioClip sound2;
 
     private AudioSource audioSource;
-    private float lowPitchRange = .25F;
-    private float highPitchRange = 0.9F;
+    private float lowPitchRange = .5F;
+    private float highPitchRange = 1.5F;
 
     public Hand hand;
     private bool pinched = false;
-    private bool triggerPressed = false;
     SteamVR_Input handType;
+
+    private bool madeHappySound = false;
  
 	void Start()
     {
@@ -42,40 +44,43 @@ public class fublController : MonoBehaviour {
 
     void OnCollisionEnter (Collision coll)
     {
-        audioSource.pitch = Random.Range (lowPitchRange,highPitchRange);
+        audioSource.pitch = Random.Range (lowPitchRange, highPitchRange);
+        audioSource.clip = impactSound;
         audioSource.Play();
-        happy = true;
+        madeHappySound = false;
     }
 
 	private void Update()
 	{
-        if (pinched != true){
-            pinched = SteamVR_Input._default.inActions.GrabPinch.GetState(hand.handType);
+		if (getPinch())
+        {
+            follow = !follow; // toggle follow
+			rb.AddRelativeForce(Vector3.up * jumpThrust); 	// jump
+            if (madeHappySound == false) {
+                makeHappySound(); 
+            }
         }
 
-        if (pinched){
-            triggerPressed = true;
-            print("pressed trigger");
-        } else {
-            triggerPressed = false;
-        }
-
-		if (happy)
-        {	// jump
-			rb.AddRelativeForce(Vector3.up * jumpThrust);
-            happy = false;
-        }
-		if (followOnStart && !triggerPressed)
+		if (follow)
 		{
-			float step = speed * Time.deltaTime;
- 	       transform.position = Vector3.MoveTowards(transform.position, followTarget.position, step);
+		    float step = speed * Time.deltaTime;
+            transform.position = Vector3.MoveTowards(transform.position, followTarget.position, step);
 		}
 	}
 
-    /* 
+    public void makeHappySound()
+    {
+        madeHappySound = true;
+        audioSource.pitch = Random.Range (lowPitchRange, highPitchRange);
+        audioSource.clip = sound1;
+        audioSource.Play();
+    }
+
     public bool getPinch()
     {
         return SteamVR_Input._default.inActions.GrabPinch.GetState(hand.handType);
-    }*/
+    }
+
+    // todo: if falling down make sound
 }
 
