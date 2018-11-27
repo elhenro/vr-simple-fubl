@@ -1,0 +1,14 @@
+2018-11-27 13:18:55.4385 [DEBUG] Scene Fusion version 1.8.1-4
+2018-11-27 13:18:55.4575 [INFO] Setting define symbol SCENE_FUSION
+2018-11-27 13:19:04.8309 [DEBUG] Scene Fusion version 1.8.1-4
+2018-11-27 13:21:13.5836 [INFO] Launching Session: start
+2018-11-27 13:21:14.3044 [DEBUG] Connecting
+2018-11-27 13:21:14.3234 [DEBUG] Connecting to room (85973:SceneFusion:SceneFusion) via TCP at roommanager-console.kinematicsoup.com:1027
+2018-11-27 13:25:00.5794 [DEBUG] Sent E:/unityVRproject/vr-learn-steamvr/KSEditorLogs/SessionLogs/session.85973-636789216743714626.log
+2018-11-27 13:25:13.1565 [DEBUG] Connecting
+2018-11-27 13:25:13.1835 [DEBUG] Connecting to room (85973:SceneFusion:SceneFusion) via TCP at roommanager-console.kinematicsoup.com:1027
+2018-11-27 13:26:20.4417 [DEBUG] Sent E:/unityVRproject/vr-learn-steamvr/KSEditorLogs/SessionLogs/session.85973-636789219131875802.log
+2018-11-27 13:26:29.6695 [INFO] Launching Session: start
+2018-11-27 13:26:30.4333 [DEBUG] Connecting
+2018-11-27 13:26:30.4412 [DEBUG] Connecting to room (85974:SceneFusion:SceneFusion) via TCP at roommanager-console.kinematicsoup.com:1067
+2018-11-27 13:32:23.7620 [DEBUG] Sent E:/unityVRproject/vr-learn-steamvr/KSEditorLogs/SessionLogs/session.85974-636789219904912811.log

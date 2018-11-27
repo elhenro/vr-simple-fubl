@@ -1,0 +1,8 @@
+2018-11-27 13:25:34.1899 [DEBUG] Connection attempt timed out. (85973:SceneFusion:SceneFusion)
+2018-11-27 13:25:34.2812 [WARNING] Connection failed: TIMEOUT, retrying...
+2018-11-27 13:25:36.2720 [DEBUG] Connecting to room (85973:SceneFusion:SceneFusion) via TCP at roommanager-console.kinematicsoup.com:1027
+2018-11-27 13:25:57.2777 [DEBUG] Connection attempt timed out. (85973:SceneFusion:SceneFusion)
+2018-11-27 13:25:57.3387 [WARNING] Connection failed: TIMEOUT, retrying...
+2018-11-27 13:25:59.3234 [DEBUG] Connecting to room (85973:SceneFusion:SceneFusion) via TCP at roommanager-console.kinematicsoup.com:1027
+2018-11-27 13:26:20.3300 [DEBUG] Connection attempt timed out. (85973:SceneFusion:SceneFusion)
+2018-11-27 13:26:20.4337 [ERROR] Connection failed: TIMEOUT
