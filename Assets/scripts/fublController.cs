@@ -12,11 +12,12 @@ public class fublController : MonoBehaviour {
 	public Transform followTarget;
     public float speed;
 	public bool follow;
+	//public bool happy;
+	public float jumpThrust;
+    public bool bouncing;
 
     public Rigidbody rb;
 
-	//public bool happy;
-	public float jumpThrust;
 
     public AudioClip impactSound;
 	public AudioClip sound1;
@@ -31,6 +32,9 @@ public class fublController : MonoBehaviour {
     SteamVR_Input handType;
 
     private bool madeHappySound = false;
+
+    //private int interval = 5; 
+    //private float nextTime = 0;
  
 	void Start()
     {
@@ -66,7 +70,16 @@ public class fublController : MonoBehaviour {
 		    float step = speed * Time.deltaTime;
             transform.position = Vector3.MoveTowards(transform.position, followTarget.position, step);
 		}
-	}
+/* 
+        if (bouncing)
+        {   
+            if (Time.time >= nextTime) {
+                bounce();
+                nextTime += interval; 
+            }
+        }
+	*/
+    }
 
     public void makeHappySound()
     {
@@ -81,6 +94,15 @@ public class fublController : MonoBehaviour {
         return SteamVR_Input._default.inActions.GrabPinch.GetState(hand.handType);
     }
 
+    private void bounce(){
+        rb.AddRelativeForce(Vector3.up * jumpThrust);
+    }
+
     // todo: if falling down make sound
+
+    // todo: jump / move / bounce
+
+    // ondeath att explosion force that pushed player away
+
 }
 

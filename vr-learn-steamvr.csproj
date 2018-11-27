@@ -322,6 +322,7 @@
     <Compile Include="Assets\scripts\RotationX.cs" />
     <Compile Include="Assets\scripts\ScaleProperty.cs" />
     <Compile Include="Assets\scripts\ShakeOnColide.cs" />
+    <Compile Include="Assets\scripts\simpleBounce.cs" />
     <Compile Include="Assets\SteamVR\Extras\SteamVR_GazeTracker.cs" />
     <Compile Include="Assets\SteamVR\Extras\SteamVR_TestThrow.cs" />
     <Compile Include="Assets\SteamVR\Extras\SteamVR_TestTrackedCamera.cs" />
