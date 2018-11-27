@@ -310,6 +310,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\ErbGameArt\Dynamic sky shader\Demo scene\SkyboxRotator.cs" />
+    <Compile Include="Assets\scripts\devMenu.cs" />
     <Compile Include="Assets\scripts\follow.cs" />
     <Compile Include="Assets\scripts\fublController.cs" />
     <Compile Include="Assets\scripts\JumpOnSpace.cs" />
