@@ -322,6 +322,12 @@
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
+    <Reference Include="MeshBakerEvalVersionEditor">
+      <HintPath>Assets/MeshBaker/scripts/Editor/core/MeshBakerEvalVersionEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="MeshBakerCore">
+      <HintPath>Assets/MeshBaker/scripts/MeshBakerCore.dll</HintPath>
+    </Reference>
     <Reference Include="mscorlib">
       <HintPath>E:\unity\Editor\Data\MonoBleedingEdge\lib\mono\2.0-api\mscorlib.dll</HintPath>
     </Reference>
@@ -373,6 +379,29 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\MeshBaker\scripts\Editor\MB3_BatchPrefabBakerEditor.cs" />
+    <Compile Include="Assets\MeshBaker\scripts\Editor\MB3_BoneWeightCopierEditor.cs" />
+    <Compile Include="Assets\MeshBaker\scripts\Editor\MB3_DisableHiddenAnimationsEditor.cs" />
+    <Compile Include="Assets\MeshBaker\scripts\Editor\MB3_GameObjectMaterialInfo.cs" />
+    <Compile Include="Assets\MeshBaker\scripts\Editor\MB3_MBVersionConcreteEditor.cs" />
+    <Compile Include="Assets\MeshBaker\scripts\Editor\MB3_MeshBakerEditor.cs" />
+    <Compile Include="Assets\MeshBaker\scripts\Editor\MB3_MeshBakerEditorInternal.cs" />
+    <Compile Include="Assets\MeshBaker\scripts\Editor\MB3_MeshBakerEditorWindow.cs" />
+    <Compile Include="Assets\MeshBaker\scripts\Editor\MB3_MeshBakerGrouperEditor.cs" />
+    <Compile Include="Assets\MeshBaker\scripts\Editor\MB3_MultiMeshBakerEditor.cs" />
+    <Compile Include="Assets\MeshBaker\scripts\Editor\MB3_SearchFilters.cs" />
+    <Compile Include="Assets\MeshBaker\scripts\Editor\MB3_ShaderTexturePropertyDrawer.cs" />
+    <Compile Include="Assets\MeshBaker\scripts\Editor\MB3_TextureBakerEditor.cs" />
+    <Compile Include="Assets\MeshBaker\scripts\Editor\MB3_TextureBakerEditorInternal.cs" />
+    <Compile Include="Assets\MeshBaker\scripts\Editor\searchFilters\MB3_GroupByAlreadyAdded.cs" />
+    <Compile Include="Assets\MeshBaker\scripts\Editor\searchFilters\MB3_GroupByEnabledDisabled.cs" />
+    <Compile Include="Assets\MeshBaker\scripts\Editor\searchFilters\MB3_GroupByLightmapIndex.cs" />
+    <Compile Include="Assets\MeshBaker\scripts\Editor\searchFilters\MB3_GroupByMaterial.cs" />
+    <Compile Include="Assets\MeshBaker\scripts\Editor\searchFilters\MB3_GroupByOutOfBoundsUVs.cs" />
+    <Compile Include="Assets\MeshBaker\scripts\Editor\searchFilters\MB3_GroupByRenderType.cs" />
+    <Compile Include="Assets\MeshBaker\scripts\Editor\searchFilters\MB3_GroupByShader.cs" />
+    <Compile Include="Assets\MeshBaker\scripts\Editor\searchFilters\MB3_GroupByStandardShaderType.cs" />
+    <Compile Include="Assets\MeshBaker\scripts\Editor\searchFilters\MB3_GroupByStatic.cs" />
     <Compile Include="Assets\SteamVR\Editor\SteamVR_Editor.cs" />
     <Compile Include="Assets\SteamVR\Editor\SteamVR_Preferences.cs" />
     <Compile Include="Assets\SteamVR\Editor\SteamVR_RenderModelEditor.cs" />
@@ -400,8 +429,14 @@
     <Compile Include="Assets\SteamVR\Input\Editor\SteamVR_Input_PostProcessBuild.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\BrokenVector\LowPolyShaders\Shaders\LowPolyPBRShader.shader" />
+    <None Include="Assets\BrokenVector\LowPolyShaders\Shaders\LowPolyUnlitShader.shader" />
     <None Include="Assets\ErbGameArt\Dynamic sky shader\Materials\Read me!.txt" />
     <None Include="Assets\ErbGameArt\Dynamic sky shader\Shader\Skybox Pro.shader" />
+    <None Include="Assets\MeshBaker\Examples\CharacterCustomization\CreditForModel.txt" />
+    <None Include="Assets\MeshBaker\Release Notes.txt" />
+    <None Include="Assets\MeshBaker\Resources\Shaders\AlbedoShader.shader" />
+    <None Include="Assets\MeshBaker\Resources\Shaders\NormalMapShader.shader" />
     <None Include="Assets\SimplyPack\readMe.txt" />
     <None Include="Assets\SteamVR\InteractionSystem\Core\Shaders\SeeThru.shader" />
     <None Include="Assets\SteamVR\InteractionSystem\Core\Shaders\Silhouette.shader" />
